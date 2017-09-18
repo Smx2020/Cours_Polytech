@@ -1,0 +1,58 @@
+#############	Exercice 1
+
+
+[1] ls
+[2] ls -l
+[3] ls -la
+[4] ls -r
+[5] ls -lac
+[6] ls -lat
+[7] ls -latr
+
+
+############	Exercice 2
+
+La commande cd sans argument renvoie au home de l'utilisateur
+
+############	Exercice 3
+
+touch annee1 Annee2 annee4 annee45 annee41 anne510 banane annee_saucisse
+
+############	Exercice 4
+
+mkdir Year
+mv annee1 Annee2 annee4 annee45 annee41 anne510 banane annee_saucisse Year
+
+############	Exercice 5
+
+[1]	mkdir ~/system
+	mkdir ~/system/tp1
+
+[2]	Le dossier ne peut etre supprime il n'est pas vide
+
+[3]	mkdir ~/system ~/system/tp1 ~/system/tp2
+
+[4]	mv ~/system ~/test
+
+[5]	{1}	cp ls ~/test/tp1
+	{2}	cp /bin/ls .
+	{3}	cp /bin/ls ~/test/tp1
+	{4}	cp ../../bin/ls test/tp1
+
+
+[6]	rm ~/test/tp*
+
+#############	Exercice 6
+
+[1]	ls -la / | grep -c "^d"
+	Il y a 25 dossiers a la racine
+
+[2]	{1}	~/.zshrc
+	{2}	/home/smx2020/.zshrc
+
+#############	Exercie 7
+
+mkdir rep1 rep2 rep3 rep3/rep31
+touch rep1/fich11 rep1/fich12 rep3/rep31/fich4.1.4 rep3/fichier14
+
+
