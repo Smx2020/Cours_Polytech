@@ -26,6 +26,7 @@ else:
 
 #	[7]		a and b		<=>		not( not(a) or not(b))
 
+####	Probleme
 
 def calendrier(mois):
 	if mois == 2:
