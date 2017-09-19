@@ -53,50 +53,23 @@ def polygone(cote, nb_sommets):
 		right(360/nb_sommets)
 		i += 1
 
-#cote = int(input("Longueur d'un cote :"))
+cote = int(input("Longueur d'un cote :"))
+speed(200)
 
-#polygone(cote,3)
+polygone(cote,3)
 
 ####	Exercice_7
-#polygone(cote,4)
+polygone(cote,4)
 
 ####	Exercice_8
-#polygone(cote,5)
+polygone(cote,5)
 
 ####	Exercice_9
 
-#nb_petale = int(input("Nombre de petales :"))
-#i = 0
-#while i < nb_petale :
-#	polygone(100,4)
-#	right(360/nb_petale)
-#	i += 1
-#time.sleep(3)
-
-####	Probleme
-
-hauteur = window_height() # récupère la hauteur de la fenêtre
-largeur = window_width()  # récupère la largeur de la fenêtre
-pas = int(input("La hauteur de la marche ="))
-x,y = -largeur/2,-hauteur/2
-state = -1
+nb_petale = int(input("Nombre de petales :"))
 i = 0
-up()
-goto(x,y)
-down()
-speed(200)
-write("arrivee")
-
-while x < largeur/2 and y < hauteur/2 :
-	if i >= pas :
-		i = 0
-		state = -state
-		left(state * 90)
-	if state == 1:
-		x += 1
-	else :
-		y += 1
-	forward(1)
+while i < nb_petale :
+	polygone(100,4)
+	right(360/nb_petale)
 	i += 1
-
-write("depart")
+time.sleep(3)
