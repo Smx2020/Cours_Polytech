@@ -31,9 +31,9 @@ else:
 def calendrier(mois):
 	if mois == 2:
 		print("Il y a 29 jours les années bissextiles et 28 jours sinon")
-	if mois < 8:
+	if mois < 8 and mois > 0:
 		print("Il y a {} jours dans le mois {}".format(30 + mois % 2, mois))
-	elif mois < 13 :
+	elif mois < 13 and mois > 0:
 		print("Il y a {} jours dans le mois {}".format(30 + (mois + 1) % 2, mois))
 	else :
 		print("Erreur mois non compris entre 1 et 12")
