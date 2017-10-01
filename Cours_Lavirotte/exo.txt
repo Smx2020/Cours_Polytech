@@ -28,7 +28,7 @@ mv annee1 Annee2 annee4 annee45 annee41 anne510 banane annee_saucisse Year
 [1]	mkdir ~/system
 	mkdir ~/system/tp1
 
-[2]	Le dossier ne peut etre supprime il n'est pas vide
+[2]	Le dossier ne peut etre supprime il n est pas vide
 
 [3]	mkdir ~/system ~/system/tp1 ~/system/tp2
 
@@ -55,4 +55,11 @@ mv annee1 Annee2 annee4 annee45 annee41 anne510 banane annee_saucisse Year
 mkdir rep1 rep2 rep3 rep3/rep31
 touch rep1/fich11 rep1/fich12 rep3/rep31/fich4.1.4 rep3/fichier14
 
+####	Exercice_8
 
+[1] mv rep3 rep2
+
+####	Exercice_9
+
+[a] find . -type f -name '*2' -exec cp -t /tmp {} \; -o -name '*4' -exec cp -t /tmp {} \;
+[b] rm rep[^1]
