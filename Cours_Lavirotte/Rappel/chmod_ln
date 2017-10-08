@@ -1,0 +1,8 @@
+ls -l
+donne les droits pour utilisateur , groupe , other
+chmod u-z,g+w,g-r,o+wx test
+
+
+ln test test.txt
+ln -s test test.txt
+

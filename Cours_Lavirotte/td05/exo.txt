@@ -1,0 +1,44 @@
+####	Exercice_1
+
+[1]	mkdir Linux && cd Linux
+[2]	touch mon_fichier && ls -l
+[3]	{a}	chmod u=rwx mon_fichier
+		chmod 750 mon_fichier
+	{b} chmod u=rx mon_fichier
+		chmod 550 mon_fichier
+	{c}	chmod u=r mon_fichier
+		chmod 450 mon_fichier
+[4]	chmod 740 mon_fichier
+[5]	Je ne peut que lire le fichier "Permission non accorde"
+[6]	chmod g=rw mon_fichier
+
+####	Exercice_2
+
+[1]	mkdir tmp && echo "42" > tmp/bidon
+[2] ln Documents/Cours_Polytech/Cours_Lavirotte/td05/tmp/bidon dhuile
+	#il contient exactement la meme chose que bidon
+[3]	chmod 640 tmp/bidon
+	Les droits sont les meme ils ont ete transfere
+[4]	Le contenu est toujours la
+
+[5]	(1) mkdir tmp && echo "42" > tmp/bidon
+	(2) ln -s tmp/bidon dhuile
+		#il contient exactement la meme chose que bidon
+	(3) ln -s tmp/bidon dhuile
+		les droits sont reste les memes
+	(4) on ne peut plus acceder au fichier
+
+[6] Le lien physique pointe vers le contenu du fichier alors
+	que le lien symbolique  pointe vers une pointeur vers le contenu
+	comme les raccourci de windows
+
+[7]	on ne peut pas le cree.
+	on a pas le droit d'ecriture
+	faire un sudo ou rajouter les droits d'ecriture
+
+####	Exercice_3
+
+[*]	alias ll="ls -lc"
+[*]	alias la="test -a"
+[*]	alias cdc="cd ~/ && clear"
+[*]	On les rajoute a .zshrc pour qu'ils soient fais au lancement du shell
