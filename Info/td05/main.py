@@ -103,4 +103,3 @@ def nb_phrase(texte):
 		else :
 			point = 0
 	return(out)
-print(nb_phrase('test...'))
