@@ -53,7 +53,9 @@ def deugueuIse(phrase):
 	out = ""
 	i = 0
 	while i < len(phrase):
-		if voyelle(phrase[i]) :
+		if phrase[i] == "e":
+			out = out + phrase[i] + "gu" + phrase[i]
+		elif voyelle(phrase[i]) :
 			out = out + phrase[i] + "g" + phrase[i]
 		else :
 			out = out + phrase[i]
