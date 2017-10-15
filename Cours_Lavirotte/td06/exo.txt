@@ -1,0 +1,80 @@
+	####	Exercice_1
+
+[*] cat /etc/passwd
+contient tout les users
+
+####	Exercice_2
+
+[*]	oui cat /etc/passwd |grep smx2020 renvoie mon compte
+[*]	c'est /root
+[*]	c'est bash
+[*]	c'est un user sans mot de passe avec des droits limite et il n'a pas de home
+[*]	Juste moi .Ce sont les users qui ont acces a la commande sudo
+
+####	Exercice_3
+
+[*]	Le fichier modifier dans etc sont passwd,group,gshadow,subuid,subgid,shadow
+[*]	ls -lat /etc
+
+[*]	sudo passwd eve
+	ls -lat /etc	#le fichier modifier est shadow
+[*]	le fichier contenant les mot de passe est shadow
+
+####	Exercice_4
+
+[*]	sudo useradd -m walle
+	passwd walle
+
+-rw-r-----   1 root shadow   1564 oct.   9 10:54 shadow
+-rw-r--r--   1 root root       40 oct.   9 10:54 subgid
+-rw-r--r--   1 root root       40 oct.   9 10:54 subuid
+-rw-r-----   1 root shadow    940 oct.   9 10:54 gshadow
+-rw-r--r--   1 root root     1122 oct.   9 10:54 group
+-rw-r--r--   1 root root     2664 oct.   9 10:54 passwd
+-rw-------   1 root root     1108 oct.   9 10:53 group-
+-rw-------   1 root root      930 oct.   9 10:53 gshadow-
+-rw-------   1 root root     2632 oct.   9 10:53 passwd-
+-rw-------   1 root root     1440 oct.   9 10:53 shadow-
+-rw-------   1 root root       21 oct.   9 10:53 subgid-
+-rw-------   1 root root       21 oct.   9 10:53 subuid-
+C'est fichiers ont ete modifie
+et un dossier home pour walle a ete cree et il est vide
+
+[*]	On rajoute /bin/bash a la fin de la ligne de walle en faisait sudo vim /etc/passwd
+
+####	Exercice_5
+
+[*]	groupadd walle-movie
+	ls -lart /etc #les fichier shadow et group ont ete modifier
+
+[*]	sudo usermod -a -G walle-movie walle
+	sudo usermod -a -G walle-movie eve
+
+####	Exercice_6
+
+[*] Je suis dans le dossier /home/walle car c'est le dossier home de walle que l'on a definie plus tot
+	Les others ont le droits d'executer donc je peut y acceder
+
+[*]	J'ai le droit de copier le fichier mais pas de le modifier
+	-rw-r--r-- 1 root root 2692 oct.  15 20:28 /etc/passwd
+
+[*]	On ne peut pas copier le fichier /etc/shadow
+	-rw-r----- 1 root shadow 1492 oct.  15 20:28 /etc/shadow
+	Les utilisateur other n'ont pas le droit de lecture
+
+####	Exercice_7
+
+[*]	Je ne peut pas modifier le fichier
+	En SuperUtilisateur je peut le modifier
+
+[*]	chmod 070 secret
+	Les fichiers sont seulement visible par moi et les superUtilisateur
+
+
+####	Exercice_8
+
+[*]	sudo userdel -r walle
+	sudo userdel eve
+
+[*]	Il n'y a plus d'utilisateur dans walle-movie
+	sudo groupdel walle-movie 
