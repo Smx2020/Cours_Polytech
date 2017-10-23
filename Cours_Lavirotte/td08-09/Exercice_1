@@ -1,0 +1,5 @@
+#!/bin/bash
+
+date > sortie.txt
+ls -l >> sortie.txt
+ls *.com 2> erreur.txt

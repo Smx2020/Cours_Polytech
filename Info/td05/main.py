@@ -30,24 +30,24 @@ def voyelle(l):
 
 ####	Exercice_4
 
-#total_v = 0
-#total_l = 0
-#go = True
-#while go :
-#	phrase = input("Le texte : ")
-#	i=0
-#	nb_voy = 0
-#	while i< len(phrase):
-#		if voyelle(phrase[i]):
-#			nb_voy += 1
-#		i=i+1
-#	print("il y a {} voyelles dans {}".format(nb_voy,phrase))
-#	total_l += i
-#	total_v += nb_voy
-#	go = (True if input("encore ? o/n ") == "o" else False)
-#print("Au total, il y a {} voyelles parmi {} lettres".format(total_v,total_l))
+total_v = 0
+total_l = 0
+go = True
+while go :
+	phrase = input("Le texte : ")
+	i=0
+	nb_voy = 0
+	while i< len(phrase):
+		if voyelle(phrase[i]):
+			nb_voy += 1
+		i=i+1
+	print("il y a {} voyelles dans {}".format(nb_voy,phrase))
+	total_l += i
+	total_v += nb_voy
+	go = (True if input("encore ? o/n ") == "o" else False)
+print("Au total, il y a {} voyelles parmi {} lettres".format(total_v,total_l))
 
-####	Exercice_5
+###	Exercice_5
 
 def deugueuIse(phrase):
 	out = ""
