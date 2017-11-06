@@ -34,7 +34,7 @@ def Moyenne_Coeff(N,C):
 		i += 1
 	return(S/C_total)
 
-def get_rekt_kiddo(S,T):
+def get_rekt_kiddo(S,T="int"):
 	out = []
 	S = S.split(" ")
 	for value in S:
@@ -50,7 +50,7 @@ while go:
 	print("donner les notes et les coefficients dans le même ordre")
 	Notes = input("les notes:")
 	Coeff = input("les coefficients:")
-	M = Moyenne_Coeff(get_rekt_kiddo(Notes,"float"),get_rekt_kiddo(Coeff,"int"))
+	M = Moyenne_Coeff(get_rekt_kiddo(Notes,"float"),get_rekt_kiddo(Coeff))
 	print("la moyenne pondérée est ",M)
 	go = (True if input("encore ? ") == "o" else False)
 
