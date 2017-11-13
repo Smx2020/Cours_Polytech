@@ -1,0 +1,53 @@
+####	Exercice_1
+
+{}	Un film sous-titre est un objet composite fais a partir de video et de texte
+
+####	Exercice_2
+
+{}	Ce fichier karaoke est fais a partir de son et de texte
+
+####	Exercice_3
+
+{}	Le systeme de commande vocal des smartphone recent qui ecrit les message dicte
+
+{} Aquisition Micro --> traitement specifique --> encodage texte --> restitution
+
+####	Exercice_4
+
+{}	Le systeme de QCM qui prend une feuille est en recupere une note
+
+{}	Aquisition Image --> traitement specifique --> encodage texte --> restitution
+
+####	Exercice_5
+
+{}	A = 10
+	A en base 2 = 1010
+
+{}	B = 31
+	B en base 2 = 11111
+
+{}	C = 32
+	C en base 2 = 100000
+
+####	Exercice_6
+
+{}	D = 101001
+	D en base 10 = 41
+
+{}	E =  1011 0011
+	E en base 10 = 179
+
+{}	F = 110 0101
+	F en base 10 = 101
+
+{}	G = 1 0001 0111
+	G en base 10 = 279
+
+####	Exercice_7
+
+{H}	1 0000 en base 2 (16) < 64
+{I}	1000 0001 en base 2 (129) > 101
+{J} 1000 0000 en base 2 (128) = 128
+{K} 1111 1111 en base 2 (255) < 256
+
+####	Exercice_
