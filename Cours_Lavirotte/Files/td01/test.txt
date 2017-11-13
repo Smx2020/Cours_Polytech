@@ -50,4 +50,16 @@
 {J} 1000 0000 en base 2 (128) = 128
 {K} 1111 1111 en base 2 (255) < 256
 
-####	Exercice_
+####	Exercice_10
+
+{}	les 3 fichier n'affiche pas le meme contenu
+
+####	Exercice_11
+
+{}	On vois le meme contenue notepad++
+{}	On vois le meme contenue dans bloc-note
+{}	il y a une entete avec le type de codage
+
+####	Exercice_12
+
+{}	les neuneus font que cliquer
