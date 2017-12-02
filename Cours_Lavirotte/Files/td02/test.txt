@@ -1,0 +1,64 @@
+#### 	Exercice_1
+
+La taille du fichier sera multiplier par 4 car on augmente la resolution sur les 2 dimension (2*2)
+
+####	Exercice_2
+
+Poid d'une image en 640*480 :
+	En nuance de gris(1 octet):	1*640*480 = 307200
+	En vraie couleur + alpha (4 octet):	4*640*480 = 1228800
+
+Poid d'une image en Full Hd 1920*1080:
+	En vraie couleur : 3*1920*1080 = 6220800
+
+Poid d'une image en UHD 3840*2160:
+	En vraie couleur : 3*3840*2160 = 24883200
+
+####	Exercice_3
+
+la valeur en hexa du pixel en 320:314 est :95af1d
+
+####	Exercice_4
+
+En grossisent l'image on voit que chaque point de l'image est assez grand et utilise plusieur pixels
+
+####	Exercice_5
+
+Les fichiers gif utilisent une palette de couleur donc stoque les couleurs sur 3 octet
+mais ca palette fais que 1 octet donc seulement 256 couleurs differentes
+
+####	Exercice_6
+
+L'image de droite est encode en gif car si on compare les deux images on peut voir
+que celle de gauche a des transitions plus fluide entre les couleurs , celle de
+gauche a des transitions plus brute du a la restriction du nombre de couleur (256 couleur).
+
+####	Exercice_7
+
+	Sur le carre en bas a gauche et en bas a droite on peut voir que le
+transition entre le noir et le blanc perd en fluidite en passant au jpg
+	Le motif au milieu fais de different traits deviens uniforme.
+	Des parasites aparaisse a cotes des points.
+
+####	Exercice_8
+
+Le meilleur pourcentage serait le 75% ou on a un fichier bien plus leger 26Ko contre les 58Ko du fichier de base
+et avec de faible perte de qualite.
+
+####	Exercice_9
+
+Car l'image n'utilise que des nuance de gris
+
+####	Exercice_10
+
+Il y a 256 niveaux de gris differents utilise dans la photo
+
+####	Exercice_11
+
+La lumiere rouge est la moins energetique et donc a plus de mal a traverse l'eau
+
+####	Exercice_12
+
+La photo sature de bleu
+
+####	Exercice_13
