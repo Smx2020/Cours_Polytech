@@ -62,3 +62,10 @@ La lumiere rouge est la moins energetique et donc a plus de mal a traverse l'eau
 La photo sature de bleu
 
 ####	Exercice_13
+
+La partie ou on met la matrice compose de 0 deviens completement noire. Car on multiplie la valeur de chaque pixel
+par 0 donc leurs sommes est nul donc des pixels noires.
+
+####	Exercice_14
+
+Les contours sont afficher et les couleurs inverse
