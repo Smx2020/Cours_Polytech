@@ -41,3 +41,43 @@ Avec le son attenue on a en 8bit un son qui sature.Donc la qualite est meilleur 
 Dans music1_tel.wav il y a des parasites et un echo.
 Dans qualite de music1_radio.wav il y a des parasites.
 En dessous de 44100Hz on peut remarquer la baisse de frequence.
+
+####	Exercice_6
+
+Nom fichier	Qualite sonore	Taille
+music2.mp3	indiscernable	224 Kio
+music2.ogg	indiscernable	202 Kio
+music2.flac	indiscernable	1 120 Kio
+music2.wav	Original	1 654 Kio
+music2.wma	indiscernable	164 Kio
+
+Il est possible d'avoir du son compresse avec perte indiscernable du son compresse sans perte.
+Ce qui permet d'avoir des fichiers plus petit plus de 5 fois plus petit ici.
+
+####	Exercice_7
+
+Les codecs audio sont plutot performant pour enlever les details inaudible
+
+####	Exercice_8
+
+Compression avec perte : mp3,ogg,wma
+Compression sans perte : flac,wav
+
+####	Exercice_9
+
+Pour supprimer la partie au debut et a la fin : 	on la selectionne est appuis sur la touche supprimer
+Pour attenuer le son en debut et en fin de lecture :	on selectionne une partie puis on vas dans effet/amplification est on met moins le nombre de decibel a reduire
+Pour inverser le sens de lecture sur un passage:	On le selectionne puis on fais effet/Inverser sens
+
+####	Exercice_10
+
+Ils nous est impossible de savoir quel type d'information est enregistrer.
+00000000 01000000	en decimal : 64
+			en hexa : 00 40
+
+####	Exercice_11
+
+texte ANSI :		2 charactere , '\0' et @
+texte UTF-16:		1 charactere , @
+son encode en 8bit :	2 valeur du son a 1/F d'intervalle F = frequence d'echantionnage
+
