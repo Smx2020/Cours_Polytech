@@ -150,13 +150,13 @@ def disp_shop(shop):
 
 def search(shop,word,field):
 	out = []
-	for CD in Shop:
+	for CD in shop:
 		if CD[field] == word:
 			out.append(CD)
 	return(out)
 
 def buy(Shop,nb,song,band):
-	for CD in Shop:
+	for CD in shop:
 		if CD[1] == band and CD[0] == song :
 			if CD[4] >= nb :
 				CD[4] = CD[4] - nb

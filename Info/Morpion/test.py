@@ -53,9 +53,11 @@ class OXO_Game(object):
 			self.screen.create_line(0, l*i, c*l, l*i,width=WIDTH)
 			self.screen.create_line(l*i, 0, l*i, c*l,width=WIDTH)
 
-	def checkCase(self,x,y):
+	def checkCase(self,x,y,map=False):
 		"Verifie si la case est disponible"
-		if self.map[y][x] == 0 :
+		if map == False :
+			map = self.map
+		if map[y][x] == 0 :
 			return(True)
 		return(False)
 
@@ -81,37 +83,33 @@ class OXO_Game(object):
 		self.victory_player = value
 		return(True)
 
-	def checkDiag1(self):
+	def checkDiag(self, diag = 0):
 		"Verifie si il a la condition de victoir dans la diagonales 1"
-		value = self.map[0][0]
-		if value == 0:
-			return(False)
-		for j in range(len(self.map)):
-			if value != self.map[j][j]:
-				return(False)
-		self.victory_player = value
-		return(True)
-
-	def checkDiag2(self):
-		"Verifie si il a la condition de victoir dans la diagonales 2"
 		l = len(self.map)
-		value = self.map[l-1][0]
+		value = self.map[diag*(-l+1)][0]
 		if value == 0:
 			return(False)
 		for j in range(l):
-			if value != self.map[l-1-j][j]:
+			if value != self.map[(1+diag)*j+diag*(1+j-l)][j]:
 				return(False)
 		self.victory_player = value
 		return(True)
-
 
 	def checkEnd(self):
 		"Verifie si la partie est finie"
 		for i in range(len(self.map)):
 			if self.checkColumn(i) or self.checkLine(i):
 				self.victory = 1
-		if self.checkDiag1() or self.checkDiag2():
+				return
+		if self.checkDiag() or self.checkDiag(-1):
 			self.victory = 1
+			return
+		for i in range(self.CASES):
+			for j in range(self.CASES):
+				if self.map[i][j] == 0 :
+					return
+		self.victory = 2
+
 
 	def changeTurn(self):
 		"Passe le tour au prochain joueur"
@@ -125,11 +123,13 @@ class OXO_Game(object):
 			self.map[y][x] = self.turn
 			self.changeTurn()
 			self.checkEnd()
+			self.bot()
 			self.refreshGame()
 			return(True)
 		return(False)
 
 	def refreshGame(self):
+		"Reactualise l'ecran"
 		self.screen.delete("all")
 		self.drawGrid()
 		for i in range(len(self.map)):
@@ -140,13 +140,48 @@ class OXO_Game(object):
 					self.drawSquare(j,i)
 		if self.victory != 0 :
 			f = "Times {} bold".format(WIDTH*10)
-			t = "Player {} win".format(self.victory_player)
-			self.screen.create_text(300,300,fill="darkred",font=f ,text=t)
-
+			if self.victory == 1 :
+				t = "Player {} win".format(self.victory_player)
+			elif self.victory == 2 :
+				t = "Draw"
+			l = 0.5*self.CASE_LENGHT*self.CASES
+			self.screen.create_text(l, l, fill="darkred", font=f, text=t)
 
 
 	def start(self):
+		"demarre le jeu"
 		self.window.mainloop()
+
+
+	def bot(self):
+		map = self.map
+		for y in range(3):
+			for x in range(3):
+				if self.checkCase(x,y):
+					map[y][x] = 2
+					if f(map) == WIN:
+						return(x,y)
+					map[y][x] = 0
+		return(1)
+
+def f(map, myTurn=False):
+	condition = checkEnd(map)
+	if condition == 1:
+		return(LOST)
+	elif condition == 2:
+		return(WIN)
+	for y in range(3):
+		for x in range(3):
+			if self.checkCase(x,y):
+				if myTurn:
+					map[y][x] = 2
+				else :
+					map[y][x] = 1
+				if f(map, not myTurn) == WIN:
+					return(WIN)
+				map[y][x] = 0
+	return(LOST)
+
 
 a = OXO_Game()
 a.start()

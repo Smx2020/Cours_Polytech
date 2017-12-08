@@ -41,3 +41,11 @@ division(int(v1),int(v2))
 
 name = input("nom = ")
 sq_name(4,4,name)
+
+
+
+
+
+
+def carre(v):
+	return(x*x)
