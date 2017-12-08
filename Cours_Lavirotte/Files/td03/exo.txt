@@ -1,0 +1,83 @@
+####	Exercice_1
+
+2*2*44100*60*60 = 	635040000 octet
+			620156.25 Kio
+			605.52 Mio
+
+C'est la taille d'un CD (environ 700Mo).
+
+####	Exercice_2
+
+music1.wav	duree = 8.51s
+		frequence = 44 100 Hz
+		Q = 16 bits
+		canaux = 1
+		wav
+
+music2.wav	duree = 9.59s
+		frequence = 44 100Hz
+		Q = 16bits
+		canaux = 2
+		wav
+
+music1.wav fais 0.72 Mio soit   751 616 octets
+music2.wav fais 1.62 Mio soit 1 693 696 octets
+
+Le fichier music2.wav est bien plus gros car est en stereo et utilise donc 2 fois plus de valeur.
+
+####	Exercice_3
+
+Sur le fichier encode en 8 bit on entend des parasyte qui etait inaudible sur le fichier en 16 bit.
+Le fichier music1.wav fais 734 Kio alors que music1_8bit.wav fais 368 Kio.
+C'est normal toutes les valeurs code sur 2 octets sont recode sur 1 octet donc le fichier est 2 fois plus petit.
+
+####	Exercice_4
+
+Le son est attenue donc a une amplitude plus basse en general donc on monte le son pour mieux entendre.
+Avec le son attenue on a en 8bit un son qui sature.Donc la qualite est meilleur sur celui pas attenue
+
+####	Exercice_5
+
+Dans music1_tel.wav il y a des parasites et un echo.
+Dans qualite de music1_radio.wav il y a des parasites.
+En dessous de 44100Hz on peut remarquer la baisse de frequence.
+
+####	Exercice_6
+
+Nom fichier	Qualite sonore	Taille
+music2.mp3	indiscernable	224 Kio
+music2.ogg	indiscernable	202 Kio
+music2.flac	indiscernable	1 120 Kio
+music2.wav	Original	1 654 Kio
+music2.wma	indiscernable	164 Kio
+
+Il est possible d'avoir du son compresse avec perte indiscernable du son compresse sans perte.
+Ce qui permet d'avoir des fichiers plus petit plus de 5 fois plus petit ici.
+
+####	Exercice_7
+
+Les codecs audio sont plutot performant pour enlever les details inaudible
+
+####	Exercice_8
+
+Compression avec perte : mp3,ogg,wma
+Compression sans perte : flac,wav
+
+####	Exercice_9
+
+Pour supprimer la partie au debut et a la fin : 	on la selectionne est appuis sur la touche supprimer
+Pour attenuer le son en debut et en fin de lecture :	on selectionne une partie puis on vas dans effet/amplification est on met moins le nombre de decibel a reduire
+Pour inverser le sens de lecture sur un passage:	On le selectionne puis on fais effet/Inverser sens
+
+####	Exercice_10
+
+Ils nous est impossible de savoir quel type d'information est enregistrer.
+00000000 01000000	en decimal : 64
+			en hexa : 00 40
+
+####	Exercice_11
+
+texte ANSI :		2 charactere , '\0' et @
+texte UTF-16:		1 charactere , @
+son encode en 8bit :	2 valeur du son a 1/F d'intervalle F = frequence d'echantionnage
+
