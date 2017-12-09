@@ -6,17 +6,8 @@ FONT_SIZE = 36
 turtle.pensize(5)
 turtle.speed(500)
 
-X = 5
 TEST = 3
 TEST2 = 1
-
-
-def setup(fonction):
-	global f
-	f = fonction
-	global screen
-	screen = turtle.getscreen()
-	screen.onclick(fonction)
 
 def draw_rect(x1,y1,x2,y2):
 	turtle.up()
@@ -43,7 +34,10 @@ def draw_pick_allumette(RULES):
 		draw_text(RULES[i],x1+0.5*l/X,y1*1.6)
 
 
-def draw_interface(allu,pick_player,pick_bot,RULES):
+def draw_interface(allu,pick_player,pick_bot,RULES,victory=False):
+	if victory:
+		draw_text("Victoire de " + victory,-WIDTH*.5,0)
+		return
 	#Terrain de jeu
 	draw_rect(-WIDTH,HEIGHT,WIDTH,-HEIGHT*0.4)
 	draw_text("|"*allu,-WIDTH*0.95,-HEIGHT*0.2,font=110)		#	Max 20
@@ -64,3 +58,5 @@ def draw_interface(allu,pick_player,pick_bot,RULES):
 
 def clear():
 	turtle.clear()
+
+#m = input(" ")
