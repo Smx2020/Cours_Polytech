@@ -1,0 +1,94 @@
+####	Exercice_1
+
+Le plus petit reseau est un reseau de 2 noeuds et 1 lien
+
+####	Exercice_2
+
+reseau social : noeud = compte
+				lien = cable electrique
+				entite en circulation = donne informatique
+
+organisme humain :	noeud = organes
+					lien = veine/arthere
+					entite en circulation = sang
+
+transport :	noeud = arret de bus
+			lien = route
+			entite en circulation = bus
+
+####	Exercice_3
+
+Si il y a une panne sur un noeud en reseau en arborescence alors le reseau se separe
+en plusieur reseau qui ne peuvent pas communiquer entre eux.Alors que en bus tant
+qu'il y a le cable de communication tous les noeuds peuvent communiquer entre eux
+meme si un noeud se casse.
+
+####	Exercice_4
+
+Non le reseau auquel on est connecte a Polytech est un reseau en arborescence car en
+anneau il faut que tout les machines soient allume pour que le reseau fonctionne
+
+####	Exercice_5
+
+Le reseau wifi est en etoile tout les appareils se connecte a un meme noeud.
+
+####	Exercice_6
+
+La topologie d'Internet est quelconque car c'est un reseau de reseau et les reseaux
+sous jacant peuvent etre de n'importe quel topologie.
+
+####	Exercice_7
+
+Un micro
+
+####	Exercice_8
+
+Le wifi utilise des ondes radio en 5GHz ou 2.4GHz
+Le protocole RLC/MAC est un protocole telephonique qui fais communiquer les tours
+telephonique et les telephones
+
+####	Exercice_9
+
+Je dispose de 3 interfaces :	lo
+								virbr0
+								wlp2s0
+
+####	Exercice_10
+
+Mon adresse MAC est c3:d7:53:e4:1d:91
+
+####	Exercice_11
+
+Mon adresse IPv4 est 192.168.43.88
+Elle est code sur 4 octet
+
+####	Exercice_12
+
+Mon adresse IPv6 est 569d:1220:b59:2867
+
+####	Exercice_13
+
+2 ^ (8*16) = 340 282 366 920 938 463 463 374 607 431 768 211 456
+
+####	Exercice_14
+
+J'ai 3 interface bien configurer : lo,virbr0,wlp2s0
+
+####	Exercice_15
+
+ping "Adresse Ip de l'ordinateur du voisin"
+
+####	Exercice_16
+
+l'adresse IPv4 de www.unice.fr : 134.59.204.9
+
+####	Exercice_17
+
+L'adresse IPv4 de edt.polytech.unice.fr : 134.59.210.10
+
+####	Exercice_18
+
+Les adresse finisse par le meme texte unice.fr
+mais ne dirige pas vers la meme machine
+
+####	Exercice_19
