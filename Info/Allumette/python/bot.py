@@ -2,9 +2,10 @@ from rules import *
 
 WIN=1
 LOST=-1
-result = {}
+result = {}			#Stoque le nombre d'allumettes et si il est victorieux
 
 def f(allu, myTurn=False):
+	"Donne si le nombre d'allumettes est gagnant ou non"
 	if allu <= 0:
 		return(LOST if myTurn else WIN)
 	if allu in result :
@@ -25,8 +26,18 @@ def f(allu, myTurn=False):
 				return(LOST)
 		return(WIN)
 
-def play(allu):
+def play(allumettes):
+	"Le bot joue sur les tas d'allumettes"
+	for i in range(len(allumettes)):
+		condition = play_one_stack(allumettes[i])
+		if allumettes[i] > 0 and condition[0] == WIN :
+			return(i,condition[1])
+	return(0,RULES[0])
+
+
+def play_one_stack(allu):
+	"Le bot joue sur un tas d'allumettes"
 	for value in RULES:
 		if f(allu-value) == WIN:
-			return(value)
-	return(1)
+			return(WIN,value)
+	return(LOST,1)

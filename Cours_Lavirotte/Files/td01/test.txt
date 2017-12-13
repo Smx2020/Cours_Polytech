@@ -63,3 +63,7 @@
 ####	Exercice_12
 
 {}	les neuneus font que cliquer
+
+####	Exercice_13
+
+2charactere non definie puis :l

@@ -92,3 +92,9 @@ Les adresse finisse par le meme texte unice.fr
 mais ne dirige pas vers la meme machine
 
 ####	Exercice_19
+
+	Ethernet	couche liaison
+	Wifi 		couche liaison
+	IP 			couche Reseau
+
+####	Exercice_20
