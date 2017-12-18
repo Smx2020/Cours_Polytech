@@ -1,0 +1,89 @@
+####	Exercice_1
+
+Carte Ethernet Ethernet :
+
+	Statut du média. . . . . . . . . . . . : Média déconnecté
+	Suffixe DNS propre à la connexion. . . :
+
+Carte Ethernet VirtualBox Host-Only Network :
+
+	Suffixe DNS propre à la connexion. . .
+	Adresse IPv6 de liaison locale. . . . .: fe80::9d60:fc7d:f8:7787%7
+	Adresse IPv4. . . . . . . . . . . . . .: 192.168.56.1
+	Masque de sous-réseau. . . . . . . . . : 255.255.255.0
+	Passerelle par défaut. . . . . . . . . :
+
+Carte réseau sans fil Wi-Fi:
+	Suffixe DNS propre à la connexion. . . : wifi.unice.fr
+	Adresse IPv6 de liaison locale. . . . .: fe80::6ddf:4114:e3dd:7531%17
+	Adresse IPv4. . . . . . . . . . . . . .: 10.154.126.210
+	Masque de sous-réseau. . . . . . . . . : 255.255.224.0
+	Passerelle par défaut. . . . . . . . . : 10.154.127.253
+
+je peut communiquer par ethernet et en Wifi
+
+####	Exercice_2
+
+IPv4 : 10.154.126.210
+IPv6 : fe80::6ddf:4114:e3dd::7531
+
+####	Exercice_3
+
+C'est le DHCP qui donne les adresses IP, son adresse IP est 10.154.127.253
+
+####	Exercice_4
+
+L'adresse MAC est unique a chaque machine.
+
+####	Exercice_5
+
+du lundi 18 décembre 2017 08:59:49
+au lundi 18 décembre 2017 10:59:49
+donc 2h.
+Si je me reconnecte avant la fin j'aurais toujours la meme adresse IP
+
+####	Exercice_6
+
+Non elles ne sont pas sur le meme reseau.
+On ne peut pas lui envoye des messages car c'est une machine virtuel et donc appartient a un autre reseau.
+
+####	Exercice_7
+
+Mon masque est 255.255.224.0
+
+####	Exercice_8
+
+mon masque est 1111 1111: 1111 1111: 1110 0000: 0000 0000
+
+On peut donc connecter 2^(32-19) - 2 = 8190
+
+####	Exercice_9
+
+Elle utilise un routage broadcast qui envoie le msg a toutes les machines.
+Elle est oblige d'utiliser ce type de routage car elle ne connait pas l'adresse du serveur DHCP et l'obtient apres la requete.
+
+####	Exercice_10
+
+La machine utilise un routage unicast car elle connait l'adresse du server DHCP.
+
+####	Exercice_11
+
+Il y a une passerelle sur mon sous reseau et son adresse IP est 10.154.127.253
+
+####	Exercice_12
+
+Sur une machine on a 2^16 ports soit 65536 ports
+Les ports utiliseable sans etre superuser sont les ports compris entre 1023 et 65535
+
+####	Exercice_13
+
+Sur le port 25 il y a le SMTP (Simple Mail Transfer Protocol)
+Sur le port 53 il y a le DNS (Domain Name System)
+sur le port 143 il y a le IMAP (Internet Message Acess Protocol)
+
+####	Exercice_14
+
+Pour les sites web on utilise le protocole HTTP (Hyper Text Transfer Protocol)
+Je communique avec la machine sur le port 80
+
+
