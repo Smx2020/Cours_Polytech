@@ -1,14 +1,64 @@
 import turtle
-
+from random import randint
 
 WIDTH, HEIGHT = turtle.screensize()
 WIDTH, HEIGHT = 600, 500
 
+MONEY = "$" + str(randint(10,99)) + " " + str(randint(100,999)) + "$"
 FONT_SIZE = 36
 turtle.pensize(5)
 turtle.hideturtle()
 turtle.speed(0)
 turtle.tracer(0)
+
+def draw_tube(x,y,taille,color):
+
+	turtle.up()
+	turtle.goto(x,y)
+	turtle.down()
+	turtle.goto(x,y+taille)
+	turtle.goto(x,y)
+	turtle.goto(x+taille/4,y)
+	turtle.goto(x+taille/4,y+taille)
+	turtle.goto(x+taille/4,y+taille/2)
+	turtle.begin_fill()
+	turtle.fillcolor(color)
+	turtle.goto(x,y+taille/2)
+	turtle.goto(x,y)
+	turtle.goto(x+taille/4,y)
+	turtle.goto(x+taille/4,y+taille/2)
+	turtle.end_fill()
+
+def draw_tube_serie(x,y,n,taille):
+	draw_tube(x,y,taille,"green")
+	for i in range(1,n):
+		draw_tube(x+i*taille/3,y,taille,"purple")
+
+
+def	draw_man(x,y,taille):
+	turtle.up()
+	turtle.goto(x,y)
+	turtle.down()
+	#tete
+	turtle.circle(taille/8)
+	turtle.right(90)
+	#corps
+	turtle.forward(taille/4)
+	#jambes
+	turtle.left(35)
+	turtle.forward(taille/6)
+	turtle.backward(taille/6)
+	turtle.right(70)
+	turtle.forward(taille/6)
+	turtle.backward(taille/6)
+	turtle.left(35)
+	#bras
+	turtle.backward(taille/6)
+	turtle.left(40)
+	turtle.forward(taille/6)
+	turtle.backward(taille/6)
+	turtle.right(80)
+	turtle.forward(taille/6)
 
 def draw_rect(x1,y1,x2,y2):
 	turtle.up()
@@ -36,13 +86,14 @@ def draw_pick_allumette(RULES):
 
 
 def draw_interface(allu,pick_player,pick_bot,RULES,player_stack,victory=False):
+	#Affiche si le jeu et finis que l'ecran de victoire
 	if victory:
 		draw_text("Victoire de " + victory,-WIDTH*.5,0)
 		return
 	#Terrain de jeu
 	draw_rect(-WIDTH,HEIGHT,WIDTH,-HEIGHT*0.4)
 	for i in range(len(allu)):
-		draw_text("|"*allu[i],-WIDTH*0.95,-HEIGHT*0.2*(-1.5*i+1)-HEIGHT*0.18,font=80)
+		draw_tube_serie(-WIDTH*0.95,-HEIGHT*0.2*(-1.5*i+1)-HEIGHT*0.18,allu[i],80)
 		draw_text(str(allu[i]),WIDTH*0.75,-HEIGHT*0.2*(-1.5*i+1)-HEIGHT*0.2,font=80)
 		if i == player_stack :
 			draw_text("_",WIDTH*0.75,-HEIGHT*0.2*(-1.5*i+1)-HEIGHT*0.2,font=80*2)
@@ -58,7 +109,13 @@ def draw_interface(allu,pick_player,pick_bot,RULES,player_stack,victory=False):
 	draw_rect(WIDTH,-HEIGHT,WIDTH*0.6,-HEIGHT*0.6)
 	draw_text("BOT",0.7*WIDTH,-HEIGHT*0.6)
 	draw_text(str(pick_bot),WIDTH*0.8,-HEIGHT*0.9)
+	draw_man(WIDTH-100,HEIGHT*0.8,350)
+	draw_man(-WIDTH+100,HEIGHT*0.8,350)
+	draw_man(-WIDTH-200,HEIGHT*0.8,350)
 
+
+def draw_background():
+	draw_text(MONEY,-WIDTH*0.7,HEIGHT-200,150)
 
 def clear():
 	turtle.clear()
