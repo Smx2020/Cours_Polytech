@@ -6,6 +6,8 @@ WIDTH, HEIGHT = 600, 500
 
 MONEY = "$" + str(randint(10,99)) + " " + str(randint(100,999)) + "$"
 FONT_SIZE = 36
+sizePlayer = 350
+sizeBot = 350
 turtle.pensize(5)
 turtle.hideturtle()
 turtle.speed(0)
@@ -30,14 +32,17 @@ def draw_tube(x,y,taille,color):
 	turtle.end_fill()
 
 def draw_tube_serie(x,y,n,taille):
-	draw_tube(x,y,taille,"green")
+	if n > 0:
+		draw_tube(x,y,taille,"green")
 	for i in range(1,n):
 		draw_tube(x+i*taille/3,y,taille,"purple")
 
 
-def	draw_man(x,y,taille):
+def	draw_man(x,y,taille,tilt=0):
+	#turtle.settiltangle(0)
 	turtle.up()
 	turtle.goto(x,y)
+	turtle.seth(tilt)
 	turtle.down()
 	#tete
 	turtle.circle(taille/8)
@@ -88,7 +93,13 @@ def draw_pick_allumette(RULES):
 def draw_interface(allu,pick_player,pick_bot,RULES,player_stack,victory=False):
 	#Affiche si le jeu et finis que l'ecran de victoire
 	if victory:
-		draw_text("Victoire de " + victory,-WIDTH*.5,0)
+		if victory == "Player":
+			draw_man(-WIDTH,0,sizePlayer)
+			draw_man(WIDTH,0,sizeBot,270)
+		else :
+			draw_man(-WIDTH,0,sizePlayer,90)
+			draw_man(WIDTH,0,sizeBot)
+		draw_text("Victoire de " + victory,-WIDTH*.75,-50,80)
 		return
 	#Terrain de jeu
 	draw_rect(-WIDTH,HEIGHT,WIDTH,-HEIGHT*0.4)
@@ -109,13 +120,18 @@ def draw_interface(allu,pick_player,pick_bot,RULES,player_stack,victory=False):
 	draw_rect(WIDTH,-HEIGHT,WIDTH*0.6,-HEIGHT*0.6)
 	draw_text("BOT",0.7*WIDTH,-HEIGHT*0.6)
 	draw_text(str(pick_bot),WIDTH*0.8,-HEIGHT*0.9)
-	draw_man(WIDTH-100,HEIGHT*0.8,350)
-	draw_man(-WIDTH+100,HEIGHT*0.8,350)
+
+	#Affiche le background
+	draw_man(WIDTH-100,HEIGHT*0.8,sizeBot)
 	draw_man(-WIDTH-200,HEIGHT*0.8,350)
-
-
-def draw_background():
+	draw_man(-WIDTH+100,HEIGHT*0.8,sizePlayer)
 	draw_text(MONEY,-WIDTH*0.7,HEIGHT-200,150)
+
+
+def reduce_size(pick_player,pick_bot):
+	global sizeBot,sizePlayer
+	sizePlayer -= pick_player*3
+	sizeBot -= pick_bot*3
 
 def clear():
 	turtle.clear()

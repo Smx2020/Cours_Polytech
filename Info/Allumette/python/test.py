@@ -4,7 +4,7 @@ from rules import *
 from random import randint
 import time
 
-START = [36,36,36]
+START = [1,0,0]
 allumettes = START
 last_player_pick = 0
 bot_pick = [0,0]
@@ -64,17 +64,18 @@ def clique(x,y):
 			x1,x2 = l*((2*i/X)-1),l*((2*(i+1)/X)-1)
 			if x > x1 and x < x2 and allumettes[player_stack] > 0:
 				victory = play(i)
+				reduce_size(RULES[i],bot_pick[1])
 
 	#met a 0 si il y a un nombre d'allumettes negatif
 	smooth(allumettes)
 	#Rafraichi l'affichage
 	clear()
 	draw_interface(allumettes,last_player_pick,bot_pick[1],RULES,player_stack,victory)
-	draw_background()
+	#draw_background()
 
 
 screen = turtle.getscreen()
 draw_interface(allumettes,last_player_pick,bot_pick[1],RULES,player_stack)
-draw_background()
+#draw_background()
 screen.onclick(clique)
 turtle.mainloop()
