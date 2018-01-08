@@ -1,0 +1,17 @@
+####	Exercice_1
+On vois la connexion au site web. On vois l'apparition de plusieurs messages
+
+####	Exercice_2
+C'est la demande au server pour acceder a la page
+
+####	Exercice_3
+Form item: "identifiant" = "zob"
+Form item: "mot_de_passe" = "j'aimelespatates"
+
+####	Exercice_4
+Il y a plus de message.On ne retrouve pas le mot de passe en clair et on ne retrouve pas la nature des messages.
+
+####	Exercice_5
+On peut utiliser wireshark pour voir les paquets et regarder si ils sont crypte ou non.
+On ne voit pas le contenu des messages.
+
