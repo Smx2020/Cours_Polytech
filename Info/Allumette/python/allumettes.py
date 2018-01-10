@@ -1,13 +1,25 @@
+##############################################################################
+#                                                                            #
+#                                                        :::      ::::::::   #
+#   allumettes.py                                      :+:      :+:    :+:   #
+#                                                    +:+ +:+         +:+     #
+#   By: Enzo ISNARD, Olivier DOUSSAUD              +#+  +:+       +#+        #
+#                                                +#+#+#+#+#+   +#+           #
+#   Created: 2017/04/12 09:50:30                    #+#    #+#               #
+#   Updated: 2018/01/10 09:13:38                   ###   ########.fr         #
+#                                                                            #
+##############################################################################
+
+
 import bot
 from graphic import *
 from rules import *
 import time
 
-#START = [1,0,0]
 allumettes = START
 last_player_pick = 0
 bot_pick = [0,0]
-player_stack = 1
+player_stack = 0
 
 def checkVictory(allumettes):
 	"Verifie si le je est finis"
@@ -42,11 +54,10 @@ def play(i) :
 def clique(x,y):
 	"Fonction lance au clique de la souris"
 	global allumettes,last_player_pick,player_stack,bot_pick
-
 	X = len(RULES)
+
 	#Verifie si le jeu est termine
 	victory = checkVictory(allumettes)
-	l = WIDTH*0.4
 
 	#Si le jeu est termine il ne faut rien modifier
 	if victory:
@@ -58,6 +69,7 @@ def clique(x,y):
 			player_stack = i
 
 	#Choix du nombre d'allumettes et passage du tour
+	l = WIDTH*0.4
 	if y <= -HEIGHT*0.5 and y >= -HEIGHT*0.9:
 		for i in range(X):
 			x1,x2 = l*((2*i/X)-1),l*((2*(i+1)/X)-1)
@@ -70,11 +82,10 @@ def clique(x,y):
 	#Rafraichi l'affichage
 	clear()
 	draw_interface(allumettes,last_player_pick,bot_pick[1],RULES,player_stack,victory)
-	#draw_background()
 
 
 screen = turtle.getscreen()
 draw_interface(allumettes,last_player_pick,bot_pick[1],RULES,player_stack)
-#draw_background()
+
 screen.onclick(clique)
 turtle.mainloop()

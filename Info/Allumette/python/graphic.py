@@ -1,3 +1,16 @@
+##############################################################################
+#                                                                            #
+#                                                        :::      ::::::::   #
+#   graphic.py                                         :+:      :+:    :+:   #
+#                                                    +:+ +:+         +:+     #
+#   By: Enzo ISNARD, Olivier DOUSSAUD              +#+  +:+       +#+        #
+#                                                +#+#+#+#+#+   +#+           #
+#   Created: 2017/04/12 09:50:30                    #+#    #+#               #
+#   Updated: 2018/01/10 09:13:38                   ###   ########.fr         #
+#                                                                            #
+##############################################################################
+
+
 import turtle
 from random import randint
 
@@ -14,7 +27,7 @@ turtle.speed(0)
 turtle.tracer(0)
 
 def draw_tube(x,y,taille,color):
-
+	"Dessine une fiole"
 	turtle.up()
 	turtle.goto(x,y)
 	turtle.down()
@@ -32,6 +45,7 @@ def draw_tube(x,y,taille,color):
 	turtle.end_fill()
 
 def draw_tube_serie(x,y,n,taille):
+	"Dessine une suite de fiole"
 	if n > 0:
 		draw_tube(x,y,taille,"green")
 	for i in range(1,n):
@@ -39,7 +53,7 @@ def draw_tube_serie(x,y,n,taille):
 
 
 def	draw_man(x,y,taille,tilt=0):
-	#turtle.settiltangle(0)
+	"Dessine un bonhomme"
 	turtle.up()
 	turtle.goto(x,y)
 	turtle.seth(tilt)
@@ -66,6 +80,7 @@ def	draw_man(x,y,taille,tilt=0):
 	turtle.forward(taille/6)
 
 def draw_rect(x1,y1,x2,y2):
+	"Dessine un rectangle"
 	turtle.up()
 	turtle.goto(x1,y1)
 	turtle.down()
@@ -75,12 +90,14 @@ def draw_rect(x1,y1,x2,y2):
 	turtle.goto(x1,y1)
 
 def draw_text(txt,x,y,font=FONT_SIZE):
+	"Dessine du texte"
 	turtle.up()
 	turtle.goto(x,y)
 	turtle.down()
 	turtle.write(txt,font=("Arial", font, "normal"))
 
 def draw_pick_allumette(RULES):
+	"Dessine le menu pour choisir le nb d'allumettes a prendre"
 	y1,y2 = -HEIGHT*0.5,-HEIGHT*0.9
 	l = WIDTH*0.4
 	X = len(RULES)
@@ -91,6 +108,7 @@ def draw_pick_allumette(RULES):
 
 
 def draw_interface(allu,pick_player,pick_bot,RULES,player_stack,victory=False):
+	"Dessine l'interface du jeu"
 	#Affiche si le jeu et finis que l'ecran de victoire
 	if victory:
 		if victory == "Player":
@@ -128,11 +146,11 @@ def draw_interface(allu,pick_player,pick_bot,RULES,player_stack,victory=False):
 
 
 def reduce_size(pick_player,pick_bot):
+	"Reduis la taille du bonhomme player et bot"
 	global sizeBot,sizePlayer
 	sizePlayer -= pick_player*3
 	sizeBot -= pick_bot*3
 
 def clear():
+	"Efface les dessins"
 	turtle.clear()
-
-#m = input(" ")

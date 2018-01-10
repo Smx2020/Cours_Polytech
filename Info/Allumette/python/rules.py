@@ -12,19 +12,23 @@
 
 from random import randint
 def inside(x,L):
+	"Verifie si x est dans L"
 	for value in L:
 		if value == x:
 			return(True)
 	return(False)
 
-START = [10,10,10]
-RULES = [1,1,1]
+START = []
+RULES = []
+
 i = 0
 Lenght = randint(2,4)
-#while i < Lenght:
-#	x = randint(1,7)
-#	if x not in RULES:
-#		RULES.append(x)
-#		x += 1
+while i < Lenght:
+	x = randint(1,7)
+	if not inside(x,RULES):
+		RULES.append(x)
+		i += 1
+RULES.sort()
 
-print(RULES)
+for i in range(randint(1,3)):
+	START.append(randint(10,36))
