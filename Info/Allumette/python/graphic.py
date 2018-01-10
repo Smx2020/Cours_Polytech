@@ -123,7 +123,6 @@ def draw_interface(allu,pick_player,pick_bot,RULES,player_stack,victory=False):
 
 	#Affiche le background
 	draw_man(WIDTH-100,HEIGHT*0.8,sizeBot)
-	draw_man(-WIDTH-200,HEIGHT*0.8,350)
 	draw_man(-WIDTH+100,HEIGHT*0.8,sizePlayer)
 	draw_text(MONEY,-WIDTH*0.7,HEIGHT-200,150)
 

@@ -1,10 +1,9 @@
 import bot
 from graphic import *
 from rules import *
-from random import randint
 import time
 
-START = [1,0,0]
+#START = [1,0,0]
 allumettes = START
 last_player_pick = 0
 bot_pick = [0,0]
