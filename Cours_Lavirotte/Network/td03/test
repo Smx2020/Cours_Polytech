@@ -38,7 +38,17 @@ Pour ce connecter on utilise la commande : ssh do616778@morag.polytech.unice.fr
 
 ####	Exercice_8
 
-On copie la clef public car c'est la clef a partage et que le clef privee ne doit
-pas etre facilement accessible.
+On copie la clef public car c'est la clef qui encrypte et que le clef privee ne
+fais que decrypte.
+
+mv mypubkey ~/.ssh/authorized_keys
+cat mypubkey >> ~/.ssh/authorized_keys
 
 ####	Exercice_9
+
+On peut se connecter sans mettre son mot-de-passe juste avec la passphrase.
+Parce que l'on a la clef privee et a reussi a decrypte le message qu'il a recu
+
+####	Exercice_10
+
+On peut se connecter sans avoir a mettre de mot-de-passe.
