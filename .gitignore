@@ -1,2 +1,5 @@
 *.tar.gz
+*.zip
+*.pdf
+*.out
 __pycache__
