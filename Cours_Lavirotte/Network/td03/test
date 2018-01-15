@@ -52,3 +52,20 @@ Parce que l'on a la clef privee et a reussi a decrypte le message qu'il a recu
 ####	Exercice_10
 
 On peut se connecter sans avoir a mettre de mot-de-passe.
+
+####	Exercice_11
+
+Il choisit initialement le systeme de mot-de-passe
+
+####	Exercice_12
+
+.ssh est un dossier cache
+id_rsa est la cle privee
+
+####	Exercice_14
+
+On utilise pas le mot-de-passe pour ce connecter mais la passphrase.
+
+####	Exercice_15
+
+
