@@ -21,8 +21,9 @@ last_player_pick = 0
 bot_pick = [0,0]
 player_stack = 0
 
+
 def checkVictory(allumettes):
-	"Verifie si le je est finis"
+	"Verifie si le jeu est finis"
 	for i in range(len(allumettes)):
 		if allumettes[i] > 0:
 			return(False)
