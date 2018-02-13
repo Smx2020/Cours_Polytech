@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+import os
+import sys
+
+def copy(src,out):
+	source = open(src, "r")
+	sortie = open(out, "w")
+	for line in source:
+		sortie.write(line)
+	source.close()
+	source.close()
+
+def main():
+	if len(sys.argv) < 3:
+		return
+	copy(sys.argv[1],sys.argv[2])
+
+main()

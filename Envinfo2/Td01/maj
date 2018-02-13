@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+
+import sys
+import os
+
+def up(letter):
+	a = "abcdefghijklmnopqrstuvwxyz"
+	A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	for i in range(len(a)):
+		if letter == a[i]:
+			return(A[i])
+	return(letter)
+
+def maj(txt):
+	out = ""
+	for letter in txt:
+		out = out + up(letter)
+	return(out)
+
+def main():
+		if len(sys.argv) == 1:
+			return
+		elif len(sys.argv) > 2:
+			print("Too much argument")
+			return
+		f = open(sys.argv[1],"r")
+		for line in f:
+			print(maj(line),end = "")
+		f.close()
+
+main()
