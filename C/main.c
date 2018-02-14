@@ -6,7 +6,7 @@
 /*   By: olivier <olivier@doussaud.org>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/19 17:45:54 by olivier           #+#    #+#             */
-/*   Updated: 2018/02/13 22:06:09 by olivier          ###   ########.fr       */
+/*   Updated: 2018/02/14 14:36:30 by olivier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int main(int argc, char const *argv[])
 		i++;
 	}
 
+	/*
 	i = 0;
 	while (i<100)
 	{
@@ -47,9 +48,8 @@ int main(int argc, char const *argv[])
 		put_nb(get_data(&test,i));
 		put_str(",");
 		i++;
-	}
-	bot(5);
-	disp();
+	}*/
+	put_nb(bot(403));
 	//disp();
 	// i = 0;
 	// data = test->data;

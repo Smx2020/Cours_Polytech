@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bot.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: olivier <olivier@doussaud.org>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/02/14 13:23:49 by olivier           #+#    #+#             */
+/*   Updated: 2018/02/14 14:35:14 by olivier          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "linked_list.h"
 #include "display.h"
 #include <stdlib.h>
@@ -16,19 +28,19 @@ int	rec(int allu, int myTurn)
 	if (allu <= 0)
 		return((myTurn) ? LOST : WIN);
 
-	// if (check != 0)
-	// {
-	// 	if (myTurn)
-	// 		return(check);
-	// 	return(-check);
-	// }
+	if (check != 0)
+	{
+		if (myTurn)
+			return(check);
+		return(-check);
+	}
 
 	if (myTurn)
 	{
 		while (i < 4)
 		{
 			value =rec(allu-i,!myTurn);
-			set_data(&dico,allu-i,value);
+			set_data(&dico,allu-i,-value);
 			if (value == WIN)
 				return(WIN);
 			i++;
@@ -40,7 +52,7 @@ int	rec(int allu, int myTurn)
 		while (i < 4)
 		{
 			value =rec(allu-i,!myTurn);
-			set_data(&dico,allu-i,-value);
+			set_data(&dico,allu-i,value);
 			if (value == LOST)
 				return(LOST);
 			i++;
@@ -59,14 +71,4 @@ int	bot(int allu)
 		i += 1;
 	}
 	return(1);
-}
-void disp(void)
-{
-	put_str("Test\n");
-	put_nb(get_data(&dico,1));
-	put_nb(get_data(&dico,2));
-	put_nb(get_data(&dico,3));
-	put_nb(get_data(&dico,4));
-	put_nb(get_data(&dico,5));
-	put_str("Test\n");
 }
