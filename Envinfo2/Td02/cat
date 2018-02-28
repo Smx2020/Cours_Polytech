@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+
+import sys
+import os.path
+
+def read_files(files):
+	for name in files:
+		if os.path.exists(name):
+			if os.path.isfile(name):
+				f = open(name,"r")
+				print(f.read(),end="")
+				f.close()
+			else:
+				print(name,"is not a file.")
+		else :
+			print(name,"does not exist.")
+
+def main():
+	if len(sys.argv) > 1:
+		read_files(sys.argv[1:])
+		return
+	while 42 :
+		print(sys.stdin.readline(),end="")
+
+main()

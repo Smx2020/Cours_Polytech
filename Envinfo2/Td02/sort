@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+
+import sys
+
+def sort(lst):
+	if len(lst) == 1:
+		return lst
+
+	for i in range(len(lst)):
+		for j in range(1,len(lst)):
+			if lst[j] < lst[j-1] :
+				lst[j], lst[j-1] = lst[j-1], lst[j]
+
+
+def main():
+	if len(sys.argv) == 1:
+		print("Not enough argument")
+		return
+
+	for name in sys.argv[1:]:
+		f = open(name,"r")
+		lst = f.readlines()
+		sort(lst)
+		for line in lst:
+			print(line,end="")
+		f.close()
+
+main()

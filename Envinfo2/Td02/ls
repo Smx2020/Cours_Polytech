@@ -1,0 +1,57 @@
+#!/usr/bin/python3
+
+import glob,sys,os.path
+
+def sort(lst):
+	if len(lst) == 1:
+		return lst
+
+	for i in range(len(lst)):
+		for j in range(1,len(lst)):
+			if lst[j] < lst[j-1] :
+				lst[j], lst[j-1] = lst[j-1], lst[j]
+	return(lst)
+
+def chelou(string):
+	j = 0
+	for i in range(len(string)):
+		if string[i] == "/":
+			j = i+1
+	return(string[j:])
+
+def	main():
+
+	if len(sys.argv) == 1:
+		for fichier in sort(glob.glob("*")):
+			print(fichier)
+		return
+
+	out_fichier = []		#liste des noms fichiers du repertoir local
+	out_folder = []			#liste contenant le nom des dossier et des fichiers a l'interieur
+
+	for search in sys.argv[1:]:
+		for fichier in sort(glob.glob(search)):
+			if os.path.isfile(fichier):
+				out_fichier.append(fichier)
+			else :
+				temp = [fichier]
+				for subfichier in sort(glob.glob(fichier+"/*")):
+					temp.append(chelou(subfichier))
+				out_folder.append(temp)
+
+	for element in out_fichier:
+ 		print(element)				#affiche les fichiers locaux
+
+	if out_fichier:
+		print()						#separe les fichiers locaux des repertoires
+
+	if len(out_folder) == 1 and len(out_fichier) == 0:
+		for name in out_folder[0][1:]:
+			print(name)				#si il y a que 1 dossier et pas de fichier locaux
+	else :
+		for value in out_folder:
+			print(value[0]+":")
+			for name in value[1:]:
+				print("\t"+name)
+
+main()
