@@ -1,0 +1,25 @@
+body {
+	background-image: url("paper.jpg");
+}
+
+h1 {
+	margin-left: 0px;
+	color: #8b3626;
+}
+
+.title {
+	text-align: center;
+}
+
+.title h1:last-child {
+	font-size: 18px;
+}
+
+ol,h1 + p {
+	margin-left: 50px;
+}
+
+p::first-letter {
+	font-size: 30px;
+	color: #913ae2;
+}

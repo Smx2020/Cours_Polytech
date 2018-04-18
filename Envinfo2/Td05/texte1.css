@@ -1,0 +1,42 @@
+body {
+	background-color: #ddd;
+	color: #333;
+}
+
+h1, h2 {
+	color: #04701b;
+}
+
+h1 {
+	text-align: center;
+	font-size: 200%;
+	text-decoration: underline;
+	margin-bottom: 4em;
+}
+
+h2 {
+	border-bottom: 2px solid;
+}
+
+hr {
+	display: none;
+}
+table {
+	border-collapse: collapse;
+	margin: 2em;
+}
+
+p {
+	text-align: justify;
+}
+
+th {
+	border: 4px solid;
+	background-color: cyan;
+}
+
+td {
+	border: 4px solid;
+	border-color: black;
+	padding: 0.5em;
+}

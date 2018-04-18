@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Page à reproduire</title>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1>
+			Page de démonstration des balises HTML
+		</h1>
+
+		<h2>
+			Liste
+		</h2>
+		<p>
+			Il est possible &emsp; d'utiliser des listes &emsp; d'éléments
+			dits non-ordonnés :<br>
+		</p>
+		<ul>
+			<li>en voici un 1er élément</li>
+			<li>
+				en voici un autre
+				<ul>
+					<li>qui nous montre qu'on peut imbriquer les listes</li>
+					<li>et on remarque qu'alors les puces changent</li>
+				</ul>
+			</li>
+			<li>et on peut même en mettre un troisième</li>
+		</ul>
+
+		Mais il est aussi possible d'avoir des listes numérotées :
+		<ol>
+			<li>dont voici le 1ère élément</li>
+			<li>et dont voici le 2ème</li>
+			<li>en notant que la numérotation est automatique</li>
+		</ol>
+
+		<h3>Tableau</h3>
+		<h4>Un titre d'importance moindre</h4>
+
+		<table>
+			<tr>
+				<!--<th></th>-->
+				<th class="row">1ère ligne, 1ère colonne </th>
+				<td>1ère ligne, 2nde colonne </td>
+			</tr>
+			<tr>
+				<th class="row">2nde ligne, 1ère colonne </th>
+				<td>2nde ligne, 2nde colonne</td>
+			</tr>
+			<!--<tr>
+				<td class="row">test</td>
+				<td>toto</td>
+				<td>carbo</td>
+			</tr>-->
+		</table><br>
+		<p>
+			Notons que certains caractères ne peuvent<br>
+			être directement inclus dans une page web. C'est le cas de < ou >.<br>
+			Toutefois, inclus directement, ils ne sont pas rejetés par le validateur qui donne simplement un avertissement.<br>
+		</p>
+		<br>
+
+		<img src="http://users.polytech.unice.fr/~eg/Envinfo2/Tds/Td4/Ressources/Images/HTML5-logo.png">
+	</body>
+</html>
