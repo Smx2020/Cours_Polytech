@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 
+import sys
 
 class Picture(object):
 	def __init__(self, pic="NULL"):
@@ -69,12 +71,15 @@ class Picture(object):
 			R = int(0.393*self.p[i][0] + 0.769*self.p[i][1] + 0.189*self.p[i][2])
 			G = int(0.349*self.p[i][0] + 0.686*self.p[i][1] + 0.168*self.p[i][2])
 			B = int(0.272*self.p[i][0] + 0.534*self.p[i][1] + 0.131*self.p[i][2])
-			if R >= 255:
-				R = 255
-			if G >= 255:
-				G = 255
-			if B >= 255:
-				B = 255
+			if R >= self.depth:
+				R = self.depth
+
+			if G >= self.depth:
+				G = self.depth
+
+			if B >= self.depth:
+				B = self.depth
+
 			self.p[i] = (R, G, B)
 
 	def reverse(self):
@@ -95,6 +100,39 @@ class Picture(object):
 			f.write("\n")
 		f.close()
 
-pic = Picture("t.ppm")
-pic.sepia()
-pic.output("toto.ppm")
+
+def main():
+	if len(sys.argv) < 3:
+		print("Not enough argument")
+		return
+
+	name = sys.argv[2]
+	out = sys.argv[3]
+	pic = Picture(name)
+
+	if sys.argv[1] == "-s":
+		if len(sys.argv) < 6:
+			print("Not enough argument for a swap")
+			return
+		co = sys.argv[4].split()
+		sw = sys.argv[5].split()
+		for i in range(3):
+			co[i] = int(co[i])
+			sw[i] = int(sw[i])
+		pic.swap(co,sw)
+
+	if sys.argv[1] == "-n":
+		pic.negatif()
+
+	elif sys.argv[1] == "-g":
+		pic.B_and_W()
+
+	elif sys.argv[1] == "-se":
+		pic.sepia()
+
+	elif sys.argv[1] == "-r":
+		pic.reverse()
+
+	pic.output(out)
+
+main()

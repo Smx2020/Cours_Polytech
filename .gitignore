@@ -3,3 +3,6 @@
 *.pdf
 *.out
 __pycache__
+*.ppm
+*.jpeg
+*.lua

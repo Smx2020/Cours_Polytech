@@ -6,7 +6,7 @@
 #   By: olivier <olivier@doussaud.org>             +#+  +:+       +#+        #
 #                                                +#+#+#+#+#+   +#+           #
 #   Created: 2018/05/22 13:26:34 by olivier           #+#    #+#             #
-#   Updated: 2018/05/28 16:24:06 by olivier          ###   ########.fr       #
+#   Updated: 2018/05/28 16:30:13 by olivier          ###   ########.fr       #
 #                                                                            #
 ##############################################################################
 
@@ -27,15 +27,20 @@ def strNim(n):
 def decomposNim(n):
 	return(list(range(n)))
 
-def test(n,R):
+def valStack(n,R):
 	if n <= 0:
 		return(0)
 
 	l = []
 	for i in R:
-		l.append(test(n-i,R))
+		l.append(valStack(n-i,R))
 	return(mex(l))
 
+def val(J,R):
+	out = 0
+	for value in J:
+		out = sum(out,valStack(value,R))
+	return(out)
 
 def sumNim(a, b):
 	a,b = min(a,b),max(a,b)
