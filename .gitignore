@@ -6,3 +6,5 @@ __pycache__
 *.ppm
 *.jpeg
 *.lua
+*.class
+*.swp
