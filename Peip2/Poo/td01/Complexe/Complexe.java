@@ -10,6 +10,12 @@ public class Complexe
 		this.img = 0;
 	}
 
+	public Complexe(double reel)
+	{
+		this.reel = reel;
+		this.img = 0;
+	}
+
 	public Complexe(double reel, double img)
 	{
 		this.reel = reel;
@@ -103,6 +109,8 @@ public class Complexe
 
 	public String toString()
 	{
+		if (this.img == 0)
+			return("" + this.reel);
 		return("(" + reel + ", " + img + ")");
 	}
 }
