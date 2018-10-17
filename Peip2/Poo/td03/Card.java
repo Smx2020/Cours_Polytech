@@ -1,21 +1,36 @@
+import PaD.*;
+
 public class Card
 {
 	private Color color;
-	private Value value;
+	private Rank rank;
+	Image img;
 
-	public Card(Value v, Color c)
+	public Card(Rank r, Color c)
 	{
-		this.value = v;
+		this.rank = r;
 		this.color = c;
+		this.img = new Image(this.toFile());
+	}
+
+	public void draw(PlancheADessin pad, double x, double y)
+	{
+		img.setOrig(x,y);
+		pad.ajouter(img);
 	}
 
 	public int compareTo(Card c)
 	{
-		return(this.value.value() - c.value.value());
+		return(this.rank.value() - c.rank.value());
+	}
+
+	private String toFile()
+	{
+		return("Cartes/" + this.rank + "-" + this.color + ".gif");
 	}
 
 	public String toString()
 	{
-		return("" + this.value + " de " + this.color);
+		return("" + this.rank + " de " + this.color);
 	}
 }

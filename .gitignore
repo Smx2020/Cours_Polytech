@@ -1,4 +1,5 @@
 *.tar.gz
+*.txt
 *.zip
 *.pdf
 *.out

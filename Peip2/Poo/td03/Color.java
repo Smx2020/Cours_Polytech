@@ -1,6 +1,6 @@
 public enum  Color
 {
-	trefle,
+	trèfle,
 	carreau,
 	coeur,
 	pique;

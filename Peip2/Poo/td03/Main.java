@@ -1,11 +1,13 @@
+import PaD.*;
+
 public class Main
 {
 
 
 	public static void main(String[] args)
 	{
-		String s = "Hello World!";
-		System.out.println(s);
+		PlancheADessin pad = new PlancheADessin();
+		Jeu52 j = new Jeu52();
 		/*
 		for (Color c: Color.values())
 		{
@@ -16,11 +18,14 @@ public class Main
 		{
 			System.out.println("" + v + " : " + v.value );
 		}
+
+
+		Card c = new Card(Rank.valet, Color.pique);
+		Card d = new Card(Rank.neuf, Color.coeur);
+		c.draw(pad,0,0);
+		d.draw(pad,64,0);
 		*/
-
-		Card c = new Card(Value.valet, Color.trefle);
-		Card d = new Card(Value.neuf, Color.coeur);
-
-		System.out.println(c.compareTo(d));
+		System.out.println(j);
+		//System.out.println(c.compareTo(d));
 	}
 }
