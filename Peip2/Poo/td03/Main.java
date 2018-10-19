@@ -26,6 +26,9 @@ public class Main
 		d.draw(pad,64,0);
 		*/
 		System.out.println(j);
+		j.shuffle(52);
+		System.out.println(j);
+		j.draw(pad,10,10);
 		//System.out.println(c.compareTo(d));
 	}
 }
