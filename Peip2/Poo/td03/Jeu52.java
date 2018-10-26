@@ -20,6 +20,11 @@ public class Jeu52
 		}
 	}
 
+	public Card getCard(int n)
+	{
+		return(deck[n]);
+	}
+
 	public void shuffle(int n)
 	{
 		Card c;
