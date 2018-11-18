@@ -1,0 +1,48 @@
+h1 {
+	background-color: black;
+	color: red;
+}
+
+h2 {
+	text-decoration: underline;
+}
+
+.acronym {
+	text-transform: uppercase;
+	color: green;
+}
+
+strong {
+	font-weight: normal;
+}
+
+#bloc_indirect {
+	font-weight: bold;
+}
+
+#mot_a_decorer {
+	color: blue;
+	text-decoration: underline;
+}
+
+p>em {
+	color: orange;
+}
+
+ol>li:first-child{
+	color: magenta;
+}
+
+ol>ul:last-child>li:last-child{
+	color: purple;
+}
+
+p::first-letter {
+	color: red;
+	text-transform: capitalize;
+}
+
+a:hover {
+	color: red;
+	text-decoration: none;
+}

@@ -1,0 +1,28 @@
+####	Exercice_1	####
+
+Les elements block :
+	<li>
+	<nav>
+	<ol>
+	<p>
+	<h1>...<h6>
+	<table>
+	<ul>
+	<hr>
+	<div>
+
+Les elements inline :
+	<a>
+	<img>
+	<b>
+	<span>
+	<strong>
+	<br>
+	<u>
+	<i>
+	<iframe>
+
+####	Exercice_3	####
+
+Les 2 premieres colonnes sont des floats alors que la 3ieme non
+donc la margin prendra pas en compte col1 et col2.

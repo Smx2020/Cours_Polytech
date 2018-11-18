@@ -1,0 +1,53 @@
+nav.mmenu:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+nav.mmenu > ul {
+	width: 456px;
+	padding: 0;
+	margin: auto;
+	list-style: none;
+}
+
+nav.mmenu ul.smenu {
+	width: 150px;
+	display: none;
+	padding: 0;
+	position: absolute;
+	list-style: none;
+}
+
+nav.mmenu li:hover > ul.smenu {
+	display: block;
+}
+
+nav.mmenu li {
+	float: left;
+	border: 1px solid black;
+}
+
+nav.mmenu li a {
+	width: 150px;
+	display: block;
+	color: white;
+	text-align: center;
+	background-color: red;
+}
+
+ul.smenu li a {
+	background-color: green;
+}
+
+nav.mmenu li a:hover {
+	background-color: blue;
+}
+
+ul.smenu li a:hover {
+	background-color: pink;
+}
+
+p:first-of-type {
+	margin-top: 2cm;
+}

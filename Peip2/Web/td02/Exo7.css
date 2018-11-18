@@ -1,0 +1,6 @@
+.lescols { 					/* on met par ex dans un <div class="".lescols"> tout le texte à colonner */
+	width: 500px; 			/* au max, ce texte en colonnes prendra 500px de large */
+	column-width: 150px; 	/* selon la dim souhaitee par colonne, il en rentrera ici 3  */
+	column-count: 3; 		/* ca tombe bien: on voudrait 3 colonnes */
+	column-gap: 10px; 		/* l'espace entre chaque sera de 10px */
+}

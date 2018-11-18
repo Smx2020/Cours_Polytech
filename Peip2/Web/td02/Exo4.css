@@ -1,0 +1,26 @@
+#col1, #col2, #col3{
+	border: 2px solid black;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#col1 {
+	float: left;
+	width: 200px;
+	border: 2px solid blue;
+}
+
+#col2 {
+	float: left;
+	width: 200px;
+	height: 300px;
+}
+
+#col3 {
+	margin-left: 430px;
+
+}
+
+#suite {
+	clear: both;
+}

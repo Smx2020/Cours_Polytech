@@ -1,0 +1,17 @@
+.block {
+	display: block;
+	background-color: lime;
+	border: solid 1px black;
+}
+
+.inline {
+	display: inline;
+	background-color: aqua;
+	border: solid 1px black;
+}
+
+.inline-block {
+	display: inline-block;
+	background-color: hotpink;
+	border: solid 1px black;
+}
