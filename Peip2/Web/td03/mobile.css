@@ -1,0 +1,32 @@
+body {
+	min-width: 0px;
+}
+
+.cols{
+	max-width: 1014px; /* = ou > au max-width de main_cont */
+}
+
+#main_cont{
+	margin-left: 0px;
+	min-width: 0px; /* 800 - 200 (main_cont margin-left) - (2*5 border)*/
+}
+
+nav {
+	display: none;
+}
+
+.menu {
+	left: 20px;
+	top: 20px;
+	position: absolute;
+}
+.menu div {
+	background-color: black;
+	width: 40px;
+	height: 6px;
+	margin: 6px 0px;
+}
+
+.menu:hover + nav {
+	display: block;
+}
