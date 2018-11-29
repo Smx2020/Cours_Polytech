@@ -1,4 +1,4 @@
-public enum Rank
+public enum Rank	//definie le rang de la carte
 {
 	deux (2),
 	trois (3),
@@ -14,7 +14,7 @@ public enum Rank
 	roi (10),
 	as (20);
 
-	int  value;							//define 1st element
+	int  value;							//definie le 1ere element
 	Rank(int v) { value = v; }			//setter
 	int  value () {return value; }		//getter
 }
