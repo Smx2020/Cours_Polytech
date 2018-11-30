@@ -26,6 +26,25 @@ public class Rectangle extends Polygone
 		this.l = l;
 	}
 
+	protected void setL(double L)
+	{
+		this.L = L;
+	}
+
+	protected void setl(double l)
+	{
+		this.l = l;
+	}
+
+	public double area()
+	{
+		return (this.l*this.L);
+	}
+
+	public  double lenght()
+	{
+		return (2*(this.L+this.l));
+	}
 	public String toString()
 	{
 		String out = "";

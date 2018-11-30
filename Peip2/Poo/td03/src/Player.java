@@ -5,10 +5,17 @@ public class Player
 	private String name="Bob";		//Le nom du joueur
 	private Card[] myCard;			//Sa main de cartes
 	private int length=0;			//nb de cartes en main
+	private boolean show = true;
 
 	Player(String name)	//Constructeur necessitant que le nom
 	{
 		this.name = name;
+	}
+
+	Player(String name, boolean show)
+	{
+		this.name = name;
+		this.show = show;
 	}
 
 	public void getCard(Jeu52 j,int start,int end)	//Prend les carte de start a end du jeu j
@@ -28,7 +35,10 @@ public class Player
 
 		for (int i=0; i<length-1; i++)
 		{
-			this.myCard[i].draw(pad, i*70, h + 25);		//affiche les cartes 1 par 1
+			if (show)
+				this.myCard[i].draw(pad, (i%13)*70, h + 100*(i/13) + 25);		//affiche la carte
+			else
+				this.myCard[i].blankCardDraw(pad, (i%13)*70, h + 100*(i/13) + 25);		//affiche une carte face cache
 		}
 	}
 

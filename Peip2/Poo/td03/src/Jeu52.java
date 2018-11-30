@@ -67,6 +67,23 @@ public class Jeu52
 				deck[i*13 +j].draw(pad,x + j*70, y + i*100);		//Affiche la colonne
 	}
 
+	public void setCard(Rank r, Color c, int n)
+	{
+		Card ca;
+		int i = -1;
+		boolean end = false;
+		while (!end)
+		{
+			i++;
+			if (this.deck[i].getColor() == c && this.deck[i].getRank() == r)
+				end = true;
+		}
+		ca = this.deck[i];
+		this.deck[i] = this.deck[n];
+		this.deck[n] = ca;
+
+	}
+
 	private int randInt(int min, int max)		//Donne un entier aleatoire entre min et max
 	{
 		if (min >= max) {

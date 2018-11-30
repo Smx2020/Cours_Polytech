@@ -5,6 +5,7 @@ public class Card
 	private Color color;		//Couleur de la carte (ex: pique)
 	private Rank rank;			//Valeur de la carte (ex: as)
 	Image img;					//Image de la carte
+	private Image back = new Image("../Cartes/dos.gif");
 
 	Card(Rank r, Color c)	//Constructeur de la carte necessitant la Couleur et le rang
 	{
@@ -27,6 +28,13 @@ public class Card
 		img.setOrig(x,y);
 		pad.ajouter(img);
 	}
+
+	public void blankCardDraw(PlancheADessin pad, double x, double y)
+	{
+		this.back.setOrig(x,y);
+		pad.ajouter(this.back);
+	}
+
 
 	public int compareTo(Card c)								//Compare les valeurs des cartes ()
 	{

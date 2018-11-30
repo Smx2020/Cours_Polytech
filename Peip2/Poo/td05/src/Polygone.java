@@ -1,4 +1,4 @@
-public class Polygone
+public abstract class Polygone
 {
 	protected Point origin;
 
@@ -11,5 +11,8 @@ public class Polygone
 	{
 		this.origin = p;
 	}
+
+	public abstract double lenght();
+	public abstract double area();
 
 }
