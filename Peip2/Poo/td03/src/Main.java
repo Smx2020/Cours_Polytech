@@ -42,6 +42,8 @@ public class Main
 
 		j.shuffle(103);				//Melanges les cartes (103 swap de 2 cartes)
 
+		System.out.println("Main des joueurs :\n");
+
 		for (int i=0; i<4 ; i++ )
 		{
 			p[i].getCard(j,i*13,(i+1)*13);	//Prend 13 cartes du jeu j
@@ -53,6 +55,31 @@ public class Main
 		pad.clear();				//efface le pad
 		pad.redraw();				//Redessine le pad
 
+		System.out.println("Main des joueurs remelange:\n");
+
+		for (int i=0; i<4 ; i++ )
+		{
+			p[i].shuffle(42);				//Melanges les cartes de la main (42 swap de 2 cartes)
+			p[i].showHand(pad, 130*i);		//Affiche sa main
+			System.out.println(p[i]);		//affiche le joueur sur le terminal
+		}
+
+		Thread.sleep(2000);			//Met en pause le programme pendant 2s
+		pad.clear();				//efface le pad
+		pad.redraw();				//Redessine le pad
+
+		System.out.println("Main des joueurs range:\n");
+
+		for (int i=0; i<4 ; i++ )
+		{
+			p[i].order();					//range les cartes de la main
+			p[i].showHand(pad, 130*i);		//Affiche sa main
+			System.out.println(p[i]);		//affiche le joueur sur le terminal
+		}
+
+		Thread.sleep(2000);			//Met en pause le programme pendant 2s
+		pad.clear();				//efface le pad
+		pad.redraw();				//Redessine le pad
 
 		//	La partie jeu	//
 		//boolean[] turn = true;
@@ -62,7 +89,6 @@ public class Main
 		bot = new Player("bot", false);		//les cartes de bot seront face cache
 		j.setCard(Rank.valet, Color.trèfle, 51);
 		j.shuffle(42);
-
 
 
 		player.getCard(j,0,25);

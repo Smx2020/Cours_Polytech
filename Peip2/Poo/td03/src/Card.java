@@ -35,6 +35,13 @@ public class Card
 		pad.ajouter(this.back);
 	}
 
+	public boolean pair(Card c)
+	{
+		if (this.rank.ordinal() == c.getRank().ordinal())
+			if (this.color.ordinal() == c.getColor().ordinal())
+				return(true);
+		return(false);
+	}
 
 	public int compareTo(Card c)								//Compare les valeurs des cartes ()
 	{
