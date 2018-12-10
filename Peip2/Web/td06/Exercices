@@ -1,0 +1,11 @@
+####    Exercice_1  ####
+
+La methode debug permet au serveur d'afficher les messages seulement si on est un mode verbose.
+On pourra alors mieux voir ou le probleme se situe (Avec les messages d'erreur)
+
+####    Exercice_3  ####
+
+{f}:    Les commandes sont bien receptionnez comme sur un server http classique
+
+{g}:    La commande netcat est plus versatile on peut ecrire ce que l'on souhaite cela permet de tester plus facilement le server web
+
